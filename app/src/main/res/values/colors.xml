@@ -19,12 +19,6 @@
     <color name="blue_btn_bg_color">#009688</color>
     <color name="blue_btn_bg_pressed_color">#00796B</color>
 
-    <string-array name="os_bg">
-        <item>#1976D2</item>
-        <item>#fcba59</item>
-        <item>#ff484d</item>
-        <item>#57dd86</item>
-    </string-array>
 
     <!-- Material DEFAULT colors -->
     <color name="material_drawer_primary">#2c1494</color>

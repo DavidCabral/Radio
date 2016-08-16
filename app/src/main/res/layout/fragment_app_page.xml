@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    android:id="@+id/rootFirstPage"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
+    tools:background="@android:color/holo_orange_dark">
+
+    <ImageView
+        android:id="@+id/ivFirstImage"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:srcCompat="@drawable/header"
+
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="100%"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+
+        android:text="@string/app.page.obrigado"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_large"
+
+        app:layout_heightPercent="35%"
+        app:layout_marginBottomPercent="20%"
+        app:layout_widthPercent="100%"/>
+</android.support.percent.PercentRelativeLayout>
