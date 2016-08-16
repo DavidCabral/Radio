@@ -121,7 +121,7 @@ public class NewsFragment extends Fragment implements OnRssLoadListener  ,Recycl
 
     @Override
     public void onSuccess(List<RssItem> rssItems) {
-        //Toast.makeText(MainActivity.this, "Item: "+rssItems.get(0).getTitle(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(RadioActivity.this, "Item: "+rssItems.get(0).getTitle(), Toast.LENGTH_SHORT).show();
         try {
             rssItems.get(0).getLink();
 
@@ -134,7 +134,7 @@ public class NewsFragment extends Fragment implements OnRssLoadListener  ,Recycl
 
     @Override
     public void onFailure(String message) {
-        //Toast.makeText(MainActivity.this, "Error: "+message, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(RadioActivity.this, "Error: "+message, Toast.LENGTH_SHORT).show();
         mSwipeRefreshLayout.setRefreshing(false);
     }
 

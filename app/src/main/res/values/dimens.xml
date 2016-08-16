@@ -9,4 +9,5 @@
     <dimen name="card_marginLeft">0dp</dimen>
     <dimen name="card_marginRight">0dp</dimen>
     <dimen name="card_marginBottom">0dp</dimen>
+    <dimen name="text_size_large">28sp</dimen>
 </resources>
