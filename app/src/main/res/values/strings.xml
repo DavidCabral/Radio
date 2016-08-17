@@ -37,9 +37,10 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="app.page.obrigado">OBRIGADO POR BAIXAR A RADIO CAMARÁ FM</string>
+    <string name="app.page.obrigado">Este app foi Desenvolvido como forma de Avaliação da Disciplina de desenvolvimento de aplicações
+                                    móveis no curso de pós graduação em engenharia de software da faculdade Unibratec</string>
     <string name="app.page.professor">Professor</string>
     <string name="aluno">Aluno</string>
-
+    <string name="st_skip">Pular</string>
 
 </resources>

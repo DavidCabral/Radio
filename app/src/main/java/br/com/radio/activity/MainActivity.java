@@ -9,6 +9,9 @@ import br.com.radio.fragment.course.PresentationPagerFragment;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
