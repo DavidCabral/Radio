@@ -9,11 +9,36 @@
     tools:ignore="ContentDescription"
     tools:background="@android:color/holo_orange_dark">
 
+
+    <ImageView
+        android:id="@+id/iv_ana"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        app:srcCompat="@drawable/ana"
+
+        app:layout_heightPercent="85%"
+        app:layout_widthPercent="60%" />
+
+    <ImageView
+        android:id="@+id/iv_ana_2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:src="@mipmap/s_1_8"
+
+        app:layout_heightPercent="10%"
+        app:layout_marginTopPercent="62%"
+        app:layout_widthPercent="55%"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:gravity="center"
 
         android:text="@string/aluno"
@@ -21,37 +46,61 @@
         android:textSize="@dimen/text_size_large"
         app:layout_heightPercent="15%"
         app:layout_widthPercent="100%"
-        android:id="@+id/tx_type" />
-
-
-    <ImageView
-        android:id="@+id/ivPerson"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        app:srcCompat="@drawable/ana"
-
-        app:layout_heightPercent="50%"
-        app:layout_widthPercent="100%"/>
-
-
+        android:id="@+id/tx_type"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:gravity="center"
 
-        android:text="Ana"
+        android:text="Ana Catarina"
         android:textColor="@android:color/white"
         android:textSize="@dimen/text_size_large"
-
-        app:layout_heightPercent="35%"
-        app:layout_marginBottomPercent="20%"
+        app:layout_heightPercent="15%"
         app:layout_widthPercent="100%"
         android:id="@+id/tx_name"
-        tools:ignore="HardcodedText" />
+        android:layout_below="@+id/iv_ana_2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
+
+    <ImageView
+        android:id="@+id/iv_ana_3"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:src="@mipmap/s_1_1"
+
+        app:layout_heightPercent="25%"
+        app:layout_widthPercent="25%"
+        android:layout_above="@+id/tx_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="58dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="14dp" />
+
+    <ImageView
+        android:id="@+id/iv_ana_4"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:src="@mipmap/s_1_8"
+
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="20%"
+        android:layout_alignTop="@+id/tx_name_ana"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="33dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginTop="50dp" />
+
 </android.support.percent.PercentRelativeLayout>

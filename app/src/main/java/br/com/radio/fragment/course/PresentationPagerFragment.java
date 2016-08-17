@@ -50,13 +50,13 @@ public class PresentationPagerFragment extends SimplePagerFragment {
 		if (position == 1)
 			return ContextCompat.getColor(getContext(), android.R.color.holo_blue_dark);
 		if (position == 2)
-			return ContextCompat.getColor(getContext(), android.R.color.holo_orange_dark);
+			return ContextCompat.getColor(getContext(), R.color.md_pink_800);
 		if (position == 3)
 			return ContextCompat.getColor(getContext(), android.R.color.holo_red_dark);
 		if (position == 4)
-			return ContextCompat.getColor(getContext(), android.R.color.holo_purple);
+			return ContextCompat.getColor(getContext(), R.color.md_amber_300);
 		if (position == 5)
-			return ContextCompat.getColor(getContext(), android.R.color.darker_gray);
+			return ContextCompat.getColor(getContext(), R.color.md_red_100);
 		if (position == 6)
 			return ContextCompat.getColor(getContext(), android.R.color.holo_green_dark);
 		return Color.TRANSPARENT;

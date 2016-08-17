@@ -18,7 +18,16 @@ public class PedroPageFragment extends PageFragment {
 
     @Override
     protected TransformItem[] provideTransformItems() {
-        return new TransformItem[0];
+        return new TransformItem[]{
+                new TransformItem(R.id.iv_1, true, 20),
+                new TransformItem(R.id.iv_pedro_1, false, 6),
+                new TransformItem(R.id.iv_pedro_2, true, 88),
+                new TransformItem(R.id.iv_pedro_3, true, 88),
+                new TransformItem(R.id.iv_pedro_4, true, 88),
+                new TransformItem(R.id.iv_4, false, 10),
+                new TransformItem(R.id.tx, false, 9),
+                new TransformItem(R.id.tx_type, false, 22)
+        };
     }
 
     @Override
