@@ -47,6 +47,7 @@
     <color name="material_drawer_selected">#5bb600</color>
     <color name="material_drawer_selected_text">#2c1494</color>
     <color name="material_drawer_header_selection_text">#FFF</color>
+    <color name="ana">#FFF</color>
 
     <!-- OVERWRITE THESE COLORS FOR A DARK THEME -->
     <!-- MaterialDrawer DEFAULT DARK colors -->

@@ -42,5 +42,6 @@
     <string name="app.page.professor">Professor</string>
     <string name="aluno">Aluno</string>
     <string name="st_skip">Pular</string>
+    <string name="ignorar">Ignorar</string>
 
 </resources>

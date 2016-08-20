@@ -16,7 +16,7 @@ public class PresentationPagerFragment extends SimplePagerFragment {
 
 	@Override
 	protected int getPagesCount() {
-		return 7;
+		return 8;
 	}
 
 	@Override
@@ -35,6 +35,8 @@ public class PresentationPagerFragment extends SimplePagerFragment {
 			return new LuanaPageFragment();
 		else if (position == 6)
 			return new PedroPageFragment();
+		else if (position == 7)
+			return new LoginPageFragment();
 
 		throw new IllegalArgumentException("Unknown position: " + position);
 
@@ -59,6 +61,8 @@ public class PresentationPagerFragment extends SimplePagerFragment {
 			return ContextCompat.getColor(getContext(), R.color.md_red_100);
 		if (position == 6)
 			return ContextCompat.getColor(getContext(), android.R.color.holo_green_dark);
+		if (position == 7)
+			return ContextCompat.getColor(getContext(), android.R.color.white);
 		return Color.TRANSPARENT;
 	}
 
