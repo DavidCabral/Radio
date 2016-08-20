@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    android:id="@+id/rootFirstPage"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
+    tools:background="@android:color/holo_orange_dark">
+
+
+    <com.facebook.login.widget.LoginButton
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_facebook"
+        android:layout_marginTop="185dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:text="@string/ignorar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_facebook"
+        android:layout_alignLeft="@+id/bt_facebook"
+        android:layout_alignStart="@+id/bt_facebook"
+        android:layout_marginTop="28dp"
+        android:id="@+id/bt_ignore"
+        android:layout_alignRight="@+id/bt_facebook"
+        android:layout_alignEnd="@+id/bt_facebook"
+        android:background="@android:color/holo_red_dark" />
+
+
+</android.support.percent.PercentRelativeLayout>
