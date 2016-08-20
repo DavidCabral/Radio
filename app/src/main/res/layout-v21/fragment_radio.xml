@@ -6,11 +6,12 @@
 
     tools:context="br.com.radio.fragment.RadioFragment">
 
+    <!-- TODO: Update blank fragment layout -->
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:background="@drawable/back"
+        android:background="@drawable/background"
         android:layout_height="match_parent">
 
         <ImageView

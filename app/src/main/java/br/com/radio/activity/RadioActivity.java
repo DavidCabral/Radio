@@ -98,17 +98,16 @@ public class RadioActivity extends AppCompatActivity implements RadioListener , 
                 .withHeader(R.layout.header)
                 .withActionBarDrawerToggleAnimated(true)
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(menu[0]).withIdentifier(1).withIcon(FontAwesome.Icon.faw_legal),
+                        new PrimaryDrawerItem().withName(menu[0]).withIdentifier(1).withIcon(FontAwesome.Icon.faw_headphones),
                         new ExpandableDrawerItem().withName(menu[1]).withIcon(FontAwesome.Icon.faw_newspaper_o).withIdentifier(2).withSelectable(false).withSubItems(
-                                new SecondaryDrawerItem().withName(news[0]).withLevel(2).withIcon(FontAwesome.Icon.faw_play).withIdentifier(2000),
-                                new SecondaryDrawerItem().withName(news[1]).withLevel(2).withIcon(FontAwesome.Icon.faw_play).withIdentifier(2001),
-                                new SecondaryDrawerItem().withName(news[2]).withLevel(2).withIcon(FontAwesome.Icon.faw_adjust).withIdentifier(2002),
-                                new SecondaryDrawerItem().withName(news[3]).withLevel(2).withIcon(FontAwesome.Icon.faw_play).withIdentifier(2003)
+                                new SecondaryDrawerItem().withName(news[0]).withLevel(2).withIcon(FontAwesome.Icon.faw_info_circle).withIdentifier(2000),
+                                new SecondaryDrawerItem().withName(news[1]).withLevel(2).withIcon(FontAwesome.Icon.faw_info).withIdentifier(2001),
+                                new SecondaryDrawerItem().withName(news[2]).withLevel(2).withIcon(FontAwesome.Icon.faw_info).withIdentifier(2002),
+                                new SecondaryDrawerItem().withName(news[3]).withLevel(2).withIcon(FontAwesome.Icon.faw_info).withIdentifier(2003)
                         ),
-                        new PrimaryDrawerItem().withName(menu[2]).withIcon(FontAwesome.Icon.faw_car).withIdentifier(2),
-                        new PrimaryDrawerItem().withName(menu[3]).withIcon(FontAwesome.Icon.faw_archive).withIdentifier(3),
+                        new PrimaryDrawerItem().withName(menu[2]).withIcon(FontAwesome.Icon.faw_archive).withIdentifier(3),
                         new DividerDrawerItem(),
-                        new PrimaryDrawerItem().withName(menu[4]).withIcon(FontAwesome.Icon.faw_close).withIdentifier(4)
+                        new PrimaryDrawerItem().withName(menu[3]).withIcon(FontAwesome.Icon.faw_close).withIdentifier(4)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
 
@@ -121,8 +120,18 @@ public class RadioActivity extends AppCompatActivity implements RadioListener , 
                                 loadFragment(RadioFragment.newInstance());
                                 break;
                             case 2000 :
-                                loadFragment(NewsFragment.newInstance());
+                                loadFragment(NewsFragment.newInstance(Constantes.GERAL_NEWS));
                                 break;
+                            case 2001 :
+                                loadFragment(NewsFragment.newInstance(Constantes.SPORT_NEWS));
+                                break;
+                            case 2002 :
+                                loadFragment(NewsFragment.newInstance(Constantes.NAUTICO_NEWS));
+                                break;
+                            case 2003 :
+                                loadFragment(NewsFragment.newInstance(Constantes.SANTA_CRUZ_NEWS));
+                                break;
+
                             case 3 :
                                 loadFragment(new CreditsFragment());
                                 break;

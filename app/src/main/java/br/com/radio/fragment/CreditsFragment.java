@@ -13,6 +13,7 @@ import com.mikepenz.aboutlibraries.LibsBuilder;
 
 import br.com.radio.R;
 import br.com.radio.adapter.ViewPagerAdapter;
+import br.com.radio.entity.Person;
 import br.com.radio.util.UpdateTab;
 
 public class CreditsFragment extends Fragment {
@@ -49,9 +50,9 @@ public class CreditsFragment extends Fragment {
         mViewPager = (ViewPager) view.findViewById(R.id.vp_tabs);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         //adicionando a tab alunos
-        adapter.addFragment(PersonFragment.newInstance(),getString(R.string.alunos));
-        //adicionando a tab professor
-        adapter.addFragment(PersonFragment.newInstance(),getString(R.string.professor));
+        adapter.addFragment(PersonFragment.newInstance(getDataPerson(true)),getString(R.string.alunos));
+        //adicionando a tab diego
+        adapter.addFragment(PersonFragment.newInstance(getDataPerson(false)),getString(R.string.professor));
         //adicionando a tab bibliotecas
         adapter.addFragment(new LibsBuilder().supportFragment(),getString(R.string.bibliotecas));
 
@@ -85,6 +86,27 @@ public class CreditsFragment extends Fragment {
             }
         });
     }
+
+    private Person[] getDataPerson(boolean students ){
+        if(students){
+            Person   person[] =  {
+                                 new Person("David Cabral" , getString(R.string.aluno),R.drawable.david),
+                                 new Person("Ana Catarina" , getString(R.string.aluno),R.drawable.ana),
+                                 new Person("Gilmar" , getString(R.string.aluno),R.drawable.gilmar),
+                                 new Person("Luana Cristina" , getString(R.string.aluno),R.drawable.luana),
+                                 new Person("Pedro Jorge" , getString(R.string.aluno),R.drawable.pedro)
+                               };
+            return person;
+        }
+
+        Person   person[] =  {
+                                new Person("Diego souza" , getString(R.string.professor),R.drawable.diego)
+                             };
+        return person;
+
+
+    }
+
 
 
 }

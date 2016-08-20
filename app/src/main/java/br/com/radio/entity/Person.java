@@ -1,13 +1,16 @@
 package br.com.radio.entity;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by David on 10/08/2016.
  */
 
-public class Person {
+public class Person implements Parcelable {
     private String name;
     private String description;
-    private String urlImage;
+    private int idImagem;
     private String facebookLink;
     private String linkedinLink;
     private String gitHubLink;
@@ -21,12 +24,10 @@ public class Person {
         this.name = name;
     }
 
-    public String getUrlImage() {
-        return urlImage;
-    }
-
-    public void setUrlImage(String urlImage) {
-        this.urlImage = urlImage;
+    public Person(String name, String description, int idImagem) {
+        this.name = name;
+        this.description = description;
+        this.idImagem = idImagem;
     }
 
     public String getFacebookLink() {
@@ -60,6 +61,53 @@ public class Person {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public int getIdImagem() {
+        return idImagem;
+    }
+
+    public void setIdImagem(int idImagem) {
+        this.idImagem = idImagem;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.name);
+        dest.writeString(this.description);
+        dest.writeInt(this.idImagem);
+        dest.writeString(this.facebookLink);
+        dest.writeString(this.linkedinLink);
+        dest.writeString(this.gitHubLink);
+    }
+
+    public Person() {
+    }
+
+    protected Person(Parcel in) {
+        this.name = in.readString();
+        this.description = in.readString();
+        this.idImagem = in.readInt();
+        this.facebookLink = in.readString();
+        this.linkedinLink = in.readString();
+        this.gitHubLink = in.readString();
+    }
+
+    public static final Parcelable.Creator<Person> CREATOR = new Parcelable.Creator<Person>() {
+        @Override
+        public Person createFromParcel(Parcel source) {
+            return new Person(source);
+        }
+
+        @Override
+        public Person[] newArray(int size) {
+            return new Person[size];
+        }
+    };
 }
 
 
