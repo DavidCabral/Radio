@@ -43,7 +43,7 @@ public class RadioFragment extends Fragment {
     public void initializeUI(View v) {
         playStop = (ImageView) v.findViewById(R.id.iv_play_stop);
         mTextViewControl = (TextView) v.findViewById(R.id.tx_conectando);
-        mPlayPauseDrawable = new PlayPauseDrawable(lineWidth(), Color.WHITE, Color.BLUE,300 , mListener.isPlaying());
+        mPlayPauseDrawable = new PlayPauseDrawable(lineWidth(), Color.WHITE, Color.BLUE, 300, mListener.isPlaying());
         mTextViewControl.setVisibility(View.GONE);
         playStop.setImageDrawable(mPlayPauseDrawable);
         playStop.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,7 @@ public class RadioFragment extends Fragment {
     }
 
     public void onRadioStarted() {
-        Log.i("onRadioStarted","onRadioStarted");
+        Log.i("onRadioStarted", "onRadioStarted");
         getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -100,7 +100,7 @@ public class RadioFragment extends Fragment {
         });
     }
 
-    public void onRadioError(){
+    public void onRadioError() {
         getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -112,11 +112,11 @@ public class RadioFragment extends Fragment {
         });
     }
 
-    private int lineWidth(){
-        int dpi = (int)(getResources().getDisplayMetrics().density * 160f);
-        if(dpi<=240){
+    private int lineWidth() {
+        int dpi = (int) (getResources().getDisplayMetrics().density * 160f);
+        if (dpi <= 240) {
             return 15;
-        }else if (dpi == 320)
+        } else if (dpi == 320)
             return 30;
 
         return 60;

@@ -48,6 +48,7 @@ public class CreditsFragment extends Fragment {
 
     private void setupViewPager(View view) {
         mViewPager = (ViewPager) view.findViewById(R.id.vp_tabs);
+
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         //adicionando a tab alunos
         adapter.addFragment(PersonFragment.newInstance(getDataPerson(true)),getString(R.string.alunos));

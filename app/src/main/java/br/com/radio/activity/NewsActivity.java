@@ -1,14 +1,20 @@
 package br.com.radio.activity;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateFormat;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+
+import com.mikepenz.fontawesome_typeface_library.FontAwesome;
+import com.mikepenz.iconics.IconicsDrawable;
 
 import java.util.Date;
 
@@ -47,18 +53,24 @@ public class NewsActivity extends AppCompatActivity {
 
         if (id == android.R.id.home) {
             finish();
+        }else if (id == R.id.shared){
+            shared();
         }
         return true;
     }
 
-    private void shareTextUrl() {
-        Intent share = new Intent(android.content.Intent.ACTION_SEND);
-        share.setType("text/plain");
-        share.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-        share.putExtra(Intent.EXTRA_SUBJECT, "Rádio CamaraFM");
-        share.putExtra(Intent.EXTRA_TEXT, url);
+    public void shared(){
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, url);
+        startActivity(Intent.createChooser(sharingIntent, ""));
+    }
 
-        startActivity(Intent.createChooser(share, "Rádio CamaraFM"));
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        return true;
     }
 
     @Override
