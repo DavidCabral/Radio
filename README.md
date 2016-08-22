@@ -5,7 +5,7 @@ Rádio
 
 **Pós graduação de Engenharia de Software**
 
-**Gerência de Mudança**
+**Desenvolvimento de Aplicações Móveis**
 
 ### Professor
 *  [Diego Souza] (https://gitlab.com/u/diegotsouza83) 
