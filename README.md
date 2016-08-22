@@ -28,4 +28,5 @@ Créditos
 * [MaterialDrawer](https://github.com/mikepenz/MaterialDrawer)
 * [Rss-Manager](https://github.com/crazyhitty/Rss-Manager)
 * [picasso](https://github.com/square/picasso)
+* [RadioPlayerService](https://github.com/iammert/RadioPlayerService)
 
