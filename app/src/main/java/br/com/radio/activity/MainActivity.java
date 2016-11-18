@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         replaceTutorialFragment();
     }
 
-    public void replaceTutorialFragment() {
+    private void replaceTutorialFragment() {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.container, new PresentationPagerFragment());
         fragmentTransaction.commit();

@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="grey">#dddddd</color>
-    <color name="black">#000</color>
-    <color name="line">#b6b5b5</color>
-    <color name="backGround">#2c9669</color>
-    <color name="form_info">#212121</color>
-    <color name="form_val">#210121</color>
     <color name="colorPrimary">#009688</color>
     <color name="colorPrimaryDark">#00796B</color>
     <color name="colorAccent">#1976D2</color>
     <color name="colorPrimarytext">#212121</color>
     <color name="colorHint">#00796B</color>
     <color name="colorSecondText">#009988</color>
-    <color name="colorFAB">#FF9800</color>
     <color name="form_title">#00796B</color>
-    <color name="bt_verde">#2cb370</color>
-
-    <color name="blue_btn_bg_color">#009688</color>
-    <color name="blue_btn_bg_pressed_color">#00796B</color>
 
 
     <!-- Material DEFAULT colors -->
@@ -27,11 +17,7 @@
     <color name="material_drawer_accent">#FF4081</color>
 
     <!-- General -->
-    <color name="transparent">#00000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="white_transparent_ex">#33FFFFFF</color>
-    <color name="gray_transparent">#55d3d3d3</color>
-
 
 
     <!-- OVERWRITE THESE COLORS FOR A LIGHT THEME -->
@@ -47,7 +33,6 @@
     <color name="material_drawer_selected">#5bb600</color>
     <color name="material_drawer_selected_text">#2c1494</color>
     <color name="material_drawer_header_selection_text">#FFF</color>
-    <color name="ana">#FFF</color>
 
     <!-- OVERWRITE THESE COLORS FOR A DARK THEME -->
     <!-- MaterialDrawer DEFAULT DARK colors -->

@@ -56,7 +56,6 @@
             android:id="@+id/txtDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ellipsize="end"
             android:fontFamily="sans-serif-light"
             android:maxLines="1"

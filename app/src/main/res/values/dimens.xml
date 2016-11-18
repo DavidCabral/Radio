@@ -5,10 +5,5 @@
     <dimen name="cardElevation">2dp</dimen>
     <dimen name="cardMaxElevation">2dp</dimen>
     <dimen name="cardCornerRadius">4dp</dimen>
-    <dimen name="card_marginTop">0dp</dimen>
-    <dimen name="card_marginLeft">0dp</dimen>
-    <dimen name="card_marginRight">0dp</dimen>
-    <dimen name="card_marginBottom">0dp</dimen>
     <dimen name="text_size_large">28sp</dimen>
-    <bool name="isTablet">false</bool>
 </resources>

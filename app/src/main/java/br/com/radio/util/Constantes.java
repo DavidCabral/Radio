@@ -5,7 +5,7 @@ package br.com.radio.util;
  */
 
 public class Constantes {
-    public static final String[] RADIO_URL = {"http://streaming03.brlogic.com:8006/live"};
+    public static final String[] RADIO_URL = {"http://servidor37.brlogic.com:8116/live"};
     public static final String GERAL_NEWS = "http://rss.home.uol.com.br/index.xml";
     public static final String SPORT_NEWS = "http://esporte.uol.com.br/futebol/clubes/sport.xml";
     public static final String NAUTICO_NEWS = "http://globoesporte.globo.com/ESP/Noticia/Rss/0,,AS0-4285,00.xml";

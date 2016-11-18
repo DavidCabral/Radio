@@ -3,7 +3,6 @@
     <string name="start">START</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="conect">Conectando.....</string>
     <string name="error.conexao.radio">Não foi Possível Conectar com a Rádio</string>
     <string name="alunos">Alunos</string>
@@ -22,15 +21,14 @@
         <item>Naútico</item>
         <item>Santa Cruz</item>
     </array>
-    <string name="title_activity_login">Sign in</string>
 
     <string name="app.page.obrigado">Este app foi Desenvolvido como forma de Avaliação da Disciplina de Desenvolvimento de Aplicações
                                     Móveis no curso de Pós Graduação em Engenharia de Software da Faculdade UNIBRATEC</string>
-    <string name="app.page.professor">Professor</string>
     <string name="aluno">Aluno</string>
     <string name="aluna">Aluna</string>
     <string name="st_skip">Pular</string>
     <string name="ignorar">Ignorar</string>
     <string name="sem_noticias">"Não Há Notícias "</string>
+    <string name="compartilhar">compartilhar</string>
 
 </resources>

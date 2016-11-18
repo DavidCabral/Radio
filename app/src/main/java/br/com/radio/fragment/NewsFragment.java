@@ -37,7 +37,7 @@ public class NewsFragment extends Fragment implements OnRssLoadListener, Recycle
     private RecyclerView mRecyclerView;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private FrameLayout frameLayout;
-    protected List<RssItem> mList;
+    private List<RssItem> mList;
     private String url;
 
     public NewsFragment() {
@@ -104,12 +104,12 @@ public class NewsFragment extends Fragment implements OnRssLoadListener, Recycle
         adapter.clearData();
         //insere os objetos na lista
         for (int i = 0; i < list.size(); i++) {
-            adapter.addListItem(list.get(i), 0);
+            adapter.addListItem(list.get(i));
         }
         mRecyclerView.getLayoutManager().smoothScrollToPosition(mRecyclerView, null, 0);
     }
 
-    public void initializeUI(View v) {
+    private void initializeUI(View v) {
         mRecyclerView = (RecyclerView) v.findViewById(R.id.rv_list);
         frameLayout = (FrameLayout) v.findViewById(R.id.cl_frame);
         mSwipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.srl_swipe);

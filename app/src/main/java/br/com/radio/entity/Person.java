@@ -88,7 +88,7 @@ public class Person implements Parcelable {
     public Person() {
     }
 
-    protected Person(Parcel in) {
+    private Person(Parcel in) {
         this.name = in.readString();
         this.description = in.readString();
         this.idImagem = in.readInt();

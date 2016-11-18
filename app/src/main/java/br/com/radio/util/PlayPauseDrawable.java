@@ -38,11 +38,11 @@ public class PlayPauseDrawable extends Drawable {
     private int shiftY;
     private boolean playing;
 
-    public PlayPauseDrawable(int strokeWidth, int playColor, int pauseColor, long animationDuration , boolean playing) {
+    public PlayPauseDrawable(int strokeWidth, boolean playing) {
         mStrokeWidth = strokeWidth;
-        mPlayColor = playColor;
-        mPauseColor = pauseColor;
-        mAnimationDuration = animationDuration;
+        mPlayColor = android.graphics.Color.WHITE;
+        mPauseColor = android.graphics.Color.BLUE;
+        mAnimationDuration = (long) 300;
         this.playing = playing;
         initPaints();
     }
@@ -283,7 +283,7 @@ public class PlayPauseDrawable extends Drawable {
 
     private abstract class PointProperty extends Property<PlayPauseDrawable, Float> {
 
-        protected int mPointIndex;
+        int mPointIndex;
 
         private PointProperty(int pointIndex) {
             super(Float.class, "point_" + pointIndex);

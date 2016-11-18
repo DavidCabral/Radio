@@ -47,7 +47,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
 
 
-    public boolean isOnlyIcons() {
+    private boolean isOnlyIcons() {
         return onlyIcons;
     }
 

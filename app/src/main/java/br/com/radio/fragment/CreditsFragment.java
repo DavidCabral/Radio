@@ -18,7 +18,7 @@ import br.com.radio.util.UpdateTab;
 
 public class CreditsFragment extends Fragment {
     private ViewPager mViewPager;
-    private TabLayout mTableLayout;
+
     public CreditsFragment() {}
 
     @Override
@@ -40,7 +40,7 @@ public class CreditsFragment extends Fragment {
     }
 
     private void setupTabLayout(View view){
-        mTableLayout = (TabLayout) view.findViewById(R.id.tab_credits);
+        TabLayout mTableLayout = (TabLayout) view.findViewById(R.id.tab_credits);
         mTableLayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.colorPrimary));
         mTableLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(getContext(), R.color.accent));
         mTableLayout.setupWithViewPager(mViewPager);
@@ -90,20 +90,18 @@ public class CreditsFragment extends Fragment {
 
     private Person[] getDataPerson(boolean students ){
         if(students){
-            Person   person[] =  {
+            return new Person[]{
                                  new Person("David Cabral" , getString(R.string.aluno),R.drawable.david),
                                  new Person("Ana Catarina" , getString(R.string.aluno),R.drawable.ana),
                                  new Person("Gilmar" , getString(R.string.aluno),R.drawable.gilmar),
                                  new Person("Luana Cristina" , getString(R.string.aluno),R.drawable.luana),
                                  new Person("Pedro Jorge" , getString(R.string.aluno),R.drawable.pedro)
                                };
-            return person;
         }
 
-        Person   person[] =  {
+        return new Person[]{
                                 new Person("Diego souza" , getString(R.string.professor),R.drawable.diego)
                              };
-        return person;
 
 
     }

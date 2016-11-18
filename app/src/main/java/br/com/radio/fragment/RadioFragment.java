@@ -18,7 +18,6 @@ import br.com.radio.util.PlayPauseDrawable;
 public class RadioFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     private PlayPauseDrawable mPlayPauseDrawable;
-    private ImageView playStop;
     private TextView mTextViewControl;
 
     public RadioFragment() {
@@ -40,10 +39,10 @@ public class RadioFragment extends Fragment {
         return view;
     }
 
-    public void initializeUI(View v) {
-        playStop = (ImageView) v.findViewById(R.id.iv_play_stop);
+    private void initializeUI(View v) {
+        ImageView playStop = (ImageView) v.findViewById(R.id.iv_play_stop);
         mTextViewControl = (TextView) v.findViewById(R.id.tx_conectando);
-        mPlayPauseDrawable = new PlayPauseDrawable(lineWidth(), Color.WHITE, Color.BLUE, 300, mListener.isPlaying());
+        mPlayPauseDrawable = new PlayPauseDrawable(lineWidth(), mListener.isPlaying());
         mTextViewControl.setVisibility(View.GONE);
         playStop.setImageDrawable(mPlayPauseDrawable);
         playStop.setOnClickListener(new View.OnClickListener() {

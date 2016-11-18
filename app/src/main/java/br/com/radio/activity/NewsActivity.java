@@ -1,30 +1,19 @@
 package br.com.radio.activity;
 
-import android.content.ClipData;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.format.DateFormat;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
-
-import com.mikepenz.fontawesome_typeface_library.FontAwesome;
-import com.mikepenz.iconics.IconicsDrawable;
-
-import java.util.Date;
 
 import br.com.radio.R;
 import br.com.radio.util.Constantes;
+import br.com.radio.util.CustomWebViewClient;
 
 public class NewsActivity extends AppCompatActivity {
     private String url;
-    private WebView webView;
-    private Toolbar tb;
 
 
     @Override
@@ -33,17 +22,24 @@ public class NewsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_news);
         url = getIntent().getStringExtra(Constantes.TAG_URL);
         loadUI();
-        webView.loadUrl(url);
+        loadWebView( url );
     }
 
     private void loadUI(){
-        webView = (WebView)findViewById(R.id.teste) ;
-        tb = (Toolbar) findViewById(R.id.tb_main);
+
+        Toolbar tb = (Toolbar) findViewById(R.id.tb_main);
         tb.setTitle("Notícias");
         setSupportActionBar(tb);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
+
+    }
+
+    private void loadWebView(String url){
+        WebView webView = (WebView) findViewById(R.id.teste);
+        webView.getSettings().setJavaScriptEnabled( true );
+        webView.setHorizontalScrollBarEnabled(true);
+        webView.loadUrl( url );
+        webView.setWebViewClient( new CustomWebViewClient() );
     }
 
 
@@ -59,7 +55,7 @@ public class NewsActivity extends AppCompatActivity {
         return true;
     }
 
-    public void shared(){
+    private void shared(){
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, url);
@@ -68,7 +64,7 @@ public class NewsActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
 
         return true;
     }

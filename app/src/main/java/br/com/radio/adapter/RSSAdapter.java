@@ -65,9 +65,9 @@ public class RSSAdapter extends RecyclerView.Adapter<RSSAdapter.MyViewHolder> {
         mRecyclerViewOnClickListenerHack = r;
     }
 
-    public void addListItem(RssItem c, int position) {
+    public void addListItem(RssItem c) {
         mList.add(c);
-        notifyItemInserted(position);
+        notifyItemInserted(0);
     }
 
     public void clearData() {
